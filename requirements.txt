@@ -1,0 +1,16 @@
+asgiref==3.5.2
+cffi==1.15.1
+charset-normalizer==2.1.1
+cryptography==37.0.4
+Django==4.1
+et-xmlfile==1.1.0
+lxml==4.9.2
+openpyxl==3.0.10
+pdfminer.six==20220524
+pdfplumber==0.7.4
+Pillow==9.2.0
+pycparser==2.21
+python-decouple==3.8
+sqlparse==0.4.2
+tzdata==2022.2
+Wand==0.6.10
