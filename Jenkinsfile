@@ -4,7 +4,7 @@ pipeline{
         stage('Setting up virtual environment') {
             steps {
                 echo 'Making sure that pip is up to date'
-                sh 'sudo apt install python3-pip '
+                sh 'apt install python3-pip -y'
                 sh 'python3 -m pip install --upgrade pip'
                 echo 'Creating a virtual evironment'
                 sh 'python3 -m venv .'
