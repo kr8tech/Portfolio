@@ -1,11 +1,11 @@
 FROM python:3.9
 
-WORKDIR /home/ubuntu/Portfolio/Dashboard
+WORKDIR /home/ubuntu/Portfolio
 
-COPY requirements.txt /home/ubuntu/Portfolio/Dashboard
+COPY requirements.txt /home/ubuntu/Portfolio
 RUN pip install -r requirements.txt
 
-COPY . /home/ubuntu/Portfolio/Dashboard
+COPY . /home/ubuntu/Portfolio
 
 EXPOSE 8000
 
