@@ -28,7 +28,7 @@ pipeline{
         stage('Test') {
             steps {
                 echo 'Running tests via pytest'
-                sh 'python3 manage.py runserver 7000'
+                sh 'python3 -m pytest --junit-xml=./reports/test_report.xml'
             }
         }
     }
