@@ -1,12 +1,12 @@
 FROM python:3.9
 
-WORKDIR /home/ubuntu/Portfolio
+WORKDIR /
 
-COPY requirements.txt /home/ubuntu/Portfolio
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . /home/ubuntu/Portfolio
+COPY . .
 
 EXPOSE 8000
 
-CMD python /home/ubuntu/Portfolio manage.py runserver 0.0.0.0:8000
+CMD python manage.py runserver 0.0.0.0:8000
