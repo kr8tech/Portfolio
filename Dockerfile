@@ -9,4 +9,4 @@ COPY . /home/ubuntu/Portfolio
 
 EXPOSE 8000
 
-CMD python /home/ubuntu/Portfolio/Dashboard manage.py runserver 0.0.0.0:8000
+CMD python /home/ubuntu/Portfolio manage.py runserver 0.0.0.0:8000
