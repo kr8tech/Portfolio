@@ -26,8 +26,8 @@ SECRET_KEY = config("PORTFOLIO_SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "kr8tech.com", "portfolio.kr8tech.com"]
-
-
+ALLOWED_HOSTS.append(config("MORE_HOSTS_1"))
+ALLOWED_HOSTS.append(config("MORE_HOSTS_2"))
 # Application definition
 
 INSTALLED_APPS = [
