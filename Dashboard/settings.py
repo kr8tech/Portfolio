@@ -25,7 +25,7 @@ SECRET_KEY = config("PORTFOLIO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "kr8tech.com", "portfolio.kr8tech.com", "ec2-3-89-59-128.compute-1.amazonaws.com", "3.89.59.128"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "kr8tech.com", "portfolio.kr8tech.com"]
 ALLOWED_HOSTS.append(config("MORE_HOSTS_1"))
 ALLOWED_HOSTS.append(config("MORE_HOSTS_2"))
 # Application definition
