@@ -7,4 +7,5 @@ RUN pip install -r requirements.txt
 
 COPY . .
 EXPOSE 8005
-CMD ["./scripts.sh"]
+RUN sh scripts.sh
+CMD python manage.py runserver 0.0.0.0:8005
