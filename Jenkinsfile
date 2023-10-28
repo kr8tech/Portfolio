@@ -1,34 +1,18 @@
 pipeline{
     agent any
     stages{
-        stage('Setting up virtual environment') {
-            steps {
-                echo 'Install dependencies and Making sure that pip is up to date'
-                sh 'sudo apt-get install -y python3-pip '
-                sh 'sudo apt-get update'
-                sh 'sudo apt-get install -y python3.10-venv'
-                sh 'python3 -m pip install --upgrade pip'
-                echo 'Creating a virtual evironment'
-                sh 'python3 -m venv .'
-                echo 'Activating the virtual environment'
-                sh '. bin/activate'
+
+        stage('Docker build'){
+            steps{
+                echo 'Build the docker file'
+                sh 'sudo docker build . t portfolio'
             }
         }
 
-        stage('Build') {
-            steps {
-                echo 'Installing depdendencies from requirements.txt'
-                sh 'python3 -m pip install -r requirements.txt'
-            }
-        }
-
-        // The test stage
-        // Here we are running our tests with pytest and exporting 
-        // the results with junit-xml to ./reports/test_report.xml
-        stage('Test') {
-            steps {
-                echo 'Running tests via pytest'
-                sh 'python3 -m pytest --junit-xml=./reports/test_report.xml'
+        stage('Docker run'){
+            steps{
+                echo 'Build the docker file'
+                sh 'sudo docker run -e PORTFOLIO_SECRET_KEY="${env.BUILD_ID}" -e MORE_HOSTS_1="3.89.59.128" -e MORE_HOSTS_2="ec2-3-89-59-128.compute-1.amazonaws.com" -p 7040:7040 portfolio'
             }
         }
     }
