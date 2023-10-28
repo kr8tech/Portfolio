@@ -5,7 +5,7 @@ pipeline{
         stage('Docker build'){
             steps{
                 echo 'Build the docker file'
-                sh 'sudo docker build . t portfolio'
+                sh 'sudo docker build . -t portfolio'
             }
         }
 
