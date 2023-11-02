@@ -7,5 +7,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 EXPOSE 8005
+RUN ls
 RUN chmod a+x scripts.sh
 CMD ["./scripts.sh"]
