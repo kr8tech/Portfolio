@@ -1,4 +1,4 @@
-FROM python:3.9-bookworm
+FROM python:3.9-alpine3.18
 RUN apt-get update
 RUN apt-get -f install 
 WORKDIR /
