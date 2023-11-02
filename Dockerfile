@@ -1,5 +1,6 @@
-FROM python:3.9
-
+FROM python:3.9-bookworm
+RUN apt-get update
+RUN apt-get -f install 
 WORKDIR /
 ENV PYTHONUNBUFFERED=1
 COPY requirements.txt requirements.txt
